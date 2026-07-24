@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">Church Gallery</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <img src="{% static 'images/dis.png' %}" class="img-fluid rounded shadow">
+            </div>
+
+            <div class="col-md-4">
+                <img src="{% static 'images/dis.png' %}" class="img-fluid rounded shadow">
+            </div>
+
+            <div class="col-md-4">
+                <img src="{% static 'images/dis.png' %}" class="img-fluid rounded shadow">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

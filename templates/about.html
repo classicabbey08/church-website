@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <img src="{% static 'images/dis.png' %}"
+                     class="img-fluid rounded shadow">
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <h2>About Our Church</h2>
+
+                <p>
+                    Christ Apostolic Church Itedo Agbara Olorun is committed
+                    to raising disciples through God's Word, prayer,
+                    holiness and genuine Christian love.
+                </p>
+
+                <p>
+                    We believe in winning souls, building faith,
+                    and preparing believers for God's kingdom.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

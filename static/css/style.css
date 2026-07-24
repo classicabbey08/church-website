@@ -11,40 +11,66 @@ body{
 HERO SECTION
 =========================== */
 
+
 .hero{
-    padding:80px 0;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("../images/dis.png");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
 }
 
 .hero-logo{
-    width:120px;
-    height:auto;
-}
-
-.hero-image{
-    max-width:100%;
-    max-height:500px;
-    object-fit:cover;
-    border-radius:15px;
+    width:110px;
+    margin-bottom:20px;
 }
 
 .hero h1{
+    font-size:3.2rem;
     font-weight:800;
 }
 
-.hero h4{
-    color:#0d6efd;
-}
-
 .hero p{
+    font-size:1.2rem;
     line-height:1.8;
 }
+
+.hero .btn{
+    border-radius:40px;
+    padding:14px 32px;
+}
+
+
+
 
 /* ===========================
 MISSION
 =========================== */
 
 .mission-section{
-    background:#ffffff;
+
+    background:#f8f9fa;
+
+}
+
+.mission-section h2{
+
+    font-weight:700;
+
+}
+
+.mission-section p{
+
+    max-width:700px;
+    margin:auto;
+
 }
 
 .mission-section h2{
@@ -69,14 +95,19 @@ VERSE
 =========================== */
 
 .verse-section{
+
     background:#0d6efd;
     color:white;
+
 }
 
-.verse-section blockquote{
-    font-size:1.3rem;
+blockquote{
+
+    font-size:28px;
     font-style:italic;
+
 }
+/* about section */
 .about-preview{
     background:#fff;
 }
@@ -89,4 +120,51 @@ VERSE
 .about-preview p{
     font-size:18px;
     line-height:1.8;
+}
+.card{
+    transition:.3s;
+    border:none;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+section{
+    padding:90px 0;
+}
+.stats{
+
+    background:#0d6efd;
+    color:white;
+
+}
+
+.stats h1{
+
+    font-size:3rem;
+    font-weight:bold;
+
+}
+
+.stats p{
+
+    font-size:18px;
+
+}
+.btn{
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+}
+img{
+
+    border-radius:15px;
+
 }
