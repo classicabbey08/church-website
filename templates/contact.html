@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="container position-relative text-center">
+        <span class="hero-eyebrow">We'd Love to Hear From You</span>
+        <h1 class="page-header-title">Contact Us</h1>
+        <p class="page-header-sub">
+            Reach out with questions, prayer requests, or just to say hello.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Content -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <span class="section-eyebrow">Get In Touch</span>
+                <h2 class="section-title mb-4">Church Address</h2>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h6>Address</h6>
+                        <p>
+                            Christ Apostolic Church Itedo Agbara Olorun
+                            <br>Lagos, Nigeria
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <h6>Phone</h6>
+                        <p><a href="tel:+234xxxxxxxxxx">+234 xxx xxx xxxx</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h6>Email</h6>
+                        <p><a href="mailto:church@email.com">church@email.com</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="contact-form-card">
+
+                    <span class="section-eyebrow">Send a Message</span>
+                    <h2 class="section-title mb-4">We'll Get Back to You</h2>
+
+                    {% comment %}
+                      Added method="post" and {% csrf_token %} — standard, safe additions.
+                      No action URL added since no contact view/handler was specified.
+                      Added name attributes so form data is ready to be captured once wired up.
+                    {% endcomment %}
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control custom-input"
+                                placeholder="Enter your full name"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-control custom-input"
+                                placeholder="you@example.com"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea
+                                name="message"
+                                class="form-control custom-input"
+                                rows="5"
+                                placeholder="How can we help you?"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary-custom w-100 w-md-auto">
+                            Send Message <i class="fa-solid fa-paper-plane ms-2"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

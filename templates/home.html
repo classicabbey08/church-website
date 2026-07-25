@@ -8,55 +8,54 @@ CAC Itedo Agbara Olorun
 {% block content %}
 
 <!-- Hero Section -->
-<section class="hero py-5">
+<section class="hero">
 
-    <div class="container">
+    <div class="hero-overlay"></div>
+
+    <div class="container position-relative">
 
         <div class="row align-items-center">
 
-            <!-- Left Side -->
-            <div class="col-lg-8 mx-auto text-center">
+            <div class="col-lg-8 mx-auto text-center hero-content">
 
                 <img src="{% static 'images/logo.png' %}"
                      alt="Church Logo"
-                     class="hero-logo mb-3">
+                     class="hero-logo mb-4">
 
-                <h1 class="display-4 fw-bold">
-                    CAC ITEDO AGBARA OLORUN
+                <span class="hero-eyebrow">Welcome Home</span>
+
+                <h1 class="hero-title">
+                    CAC Itedo Agbara Olorun
                 </h1>
 
-                <h4 class="text-primary mb-3">
+                <p class="hero-tagline">
                     One Fold, One Shepherd
-                </h4>
+                </p>
 
-                <p class="lead">
-                    Welcome to Christ Apostolic Church Itedo Agbara Olorun,
-                    where lives are transformed through the power of God's Word,
+                <p class="hero-lead">
+                    A place where lives are transformed through the power of God's Word,
                     heartfelt worship, fervent prayer, and genuine Christian love.
                 </p>
 
-                <p class="text-muted fst-italic">
-                    "And there shall be one fold, and one shepherd."
-                    <br>
-                    <strong>John 10:16</strong>
+                <p class="hero-verse">
+                    &ldquo;And there shall be one fold, and one shepherd.&rdquo;
+                    <span class="d-block mt-1">— John 10:16</span>
                 </p>
 
-                <div class="mt-4">
+                <div class="hero-actions">
 
-                    <a href="#" class="btn btn-primary btn-lg me-3">
+                    <a href="#weekly-services" class="btn btn-hero-primary">
                         Join Us This Sunday
                     </a>
 
-                    <a href="#" class="btn btn-outline-primary btn-lg">
-                        Watch Sermons
+                    {% comment %} No sermons/video page exists yet — point this at the real URL once available {% endcomment %}
+                    <a href="#" class="btn btn-hero-outline">
+                        <i class="fa-solid fa-play me-2"></i>Watch Sermons
                     </a>
 
                 </div>
 
             </div>
-
-
-
 
         </div>
 
@@ -69,51 +68,55 @@ CAC Itedo Agbara Olorun
 
     <div class="container text-center">
 
-        <h2 class="mb-4">Our Mission</h2>
+        <span class="section-eyebrow">Our Purpose</span>
+        <h2 class="section-title">Our Mission</h2>
 
-        <p class="lead">
+        <p class="mission-text mx-auto">
             To raise disciples of Christ through the teaching of God's Word,
             fervent prayer, holiness, and genuine Christian love.
         </p>
 
     </div>
 
-    <section class="stats py-5">
+</section>
+
+<!-- Stats -->
+<section class="stats py-5">
 
     <div class="container">
 
-        <div class="row text-center">
+        <div class="row text-center g-4">
 
-            <div class="col-md-3">
-
-                <h1>50+</h1>
-
-                <p>Years of Ministry</p>
-
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <i class="fa-solid fa-cross stat-icon"></i>
+                    <h2 class="stat-number">50+</h2>
+                    <p class="stat-label">Years of Ministry</p>
+                </div>
             </div>
 
-            <div class="col-md-3">
-
-                <h1>500+</h1>
-
-                <p>Members</p>
-
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <i class="fa-solid fa-people-group stat-icon"></i>
+                    <h2 class="stat-number">500+</h2>
+                    <p class="stat-label">Members</p>
+                </div>
             </div>
 
-            <div class="col-md-3">
-
-                <h1>100+</h1>
-
-                <p>Souls Won</p>
-
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <i class="fa-solid fa-dove stat-icon"></i>
+                    <h2 class="stat-number">100+</h2>
+                    <p class="stat-label">Souls Won</p>
+                </div>
             </div>
 
-            <div class="col-md-3">
-
-                <h1>7</h1>
-
-                <p>Weekly Programs</p>
-
+            <div class="col-6 col-md-3">
+                <div class="stat-item">
+                    <i class="fa-solid fa-calendar-days stat-icon"></i>
+                    <h2 class="stat-number">7</h2>
+                    <p class="stat-label">Weekly Programs</p>
+                </div>
             </div>
 
         </div>
@@ -122,53 +125,49 @@ CAC Itedo Agbara Olorun
 
 </section>
 
-</section>
-
 <!-- Weekly Services -->
-<section class="services py-5 bg-light">
+<section class="services py-5" id="weekly-services">
 
     <div class="container">
 
-        <h2 class="text-center mb-5">
-            Weekly Services
-        </h2>
+        <div class="text-center mb-5">
+            <span class="section-eyebrow">Come Worship With Us</span>
+            <h2 class="section-title">Weekly Services</h2>
+        </div>
 
         <div class="row g-4">
 
             <div class="col-md-4">
-
-                <div class="card p-4 shadow-sm text-center h-100">
-
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
                     <h4>Sunday Worship</h4>
-
-                    <p>9:00 AM</p>
-
+                    <p class="service-time">9:00 AM</p>
+                    <p class="service-desc">A morning of praise, the Word, and fellowship.</p>
                 </div>
-
             </div>
 
             <div class="col-md-4">
-
-                <div class="card p-4 shadow-sm text-center h-100">
-
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-book-bible"></i>
+                    </div>
                     <h4>Bible Study</h4>
-
-                    <p>Wednesday • 5:00 PM</p>
-
+                    <p class="service-time">Wednesday • 5:00 PM</p>
+                    <p class="service-desc">Digging deeper into Scripture together.</p>
                 </div>
-
             </div>
 
             <div class="col-md-4">
-
-                <div class="card p-4 shadow-sm text-center h-100">
-
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-hands-praying"></i>
+                    </div>
                     <h4>Prayer Meeting</h4>
-
-                    <p>Friday • 6:00 PM</p>
-
+                    <p class="service-time">Friday • 6:00 PM</p>
+                    <p class="service-desc">Seeking God's face in united prayer.</p>
                 </div>
-
             </div>
 
         </div>
@@ -181,15 +180,11 @@ CAC Itedo Agbara Olorun
 <section class="verse-section py-5 text-center">
 
     <div class="container">
-
-        <h2>John 10:16</h2>
-
-        <blockquote class="blockquote mt-3">
-
-            "One Fold, One Shepherd"
-
+        <i class="fa-solid fa-quote-left verse-icon"></i>
+        <blockquote class="blockquote">
+            One Fold, One Shepherd
         </blockquote>
-
+        John 10:16
     </div>
 
 </section>
@@ -199,13 +194,14 @@ CAC Itedo Agbara Olorun
 
     <div class="container">
 
-        <div class="row align-items-center">
+        <div class="row align-items-center g-5">
 
             <div class="col-lg-6">
 
-                <h2>About Our Church</h2>
+                <span class="section-eyebrow">Who We Are</span>
+                <h2 class="section-title mb-3">About Our Church</h2>
 
-                <p>
+                <p class="about-text">
                     Christ Apostolic Church Itedo Agbara Olorun is a place
                     where everyone is welcomed with love.
                     We are committed to preaching the Gospel,
@@ -213,16 +209,19 @@ CAC Itedo Agbara Olorun
                     live according to God's Word.
                 </p>
 
-                <a href="#" class="btn btn-primary">
-                    Learn More
+                <a href="{% url 'about' %}" class="btn btn-primary-custom">
+                    Learn More <i class="fa-solid fa-arrow-right ms-2"></i>
                 </a>
 
             </div>
 
             <div class="col-lg-6 text-center">
 
-                <img src="{% static 'images/dis.png' %}"
-                     class="img-fluid rounded shadow">
+                <div class="about-image-wrap">
+                    <img src="{% static 'images/dis.png' %}"
+                         class="img-fluid about-image"
+                         alt="Church congregation">
+                </div>
 
             </div>
 

@@ -1,15 +1,74 @@
-<footer class="bg-dark text-white text-center py-4 mt-5">
-
+<footer class="custom-footer text-white pt-5 pb-4">
     <div class="container">
 
-        <h5>Church Name</h5>
+        <div class="row gy-4">
 
-        <p>Growing together in faith and love.</p>
+            <!-- About -->
+            <div class="col-lg-4 col-md-6">
+                <h5 class="footer-heading">
+                    <i class="fa-solid fa-church me-2"></i>CAC Itedo Agbara Olorun
+                </h5>
+                <p class="footer-text">
+                    Raising disciples through God's Word — a community built on
+                    faith, love, and service.
+                </p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
 
-        <p class="mb-0">
-            © 2026 Church Name. All Rights Reserved.
-        </p>
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h6 class="footer-heading-sm">Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'leadership' %}">Leadership</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Service Times -->
+            <div class="col-lg-3 col-md-6">
+                <h6 class="footer-heading-sm">Service Times</h6>
+       <ul class="footer-info-list">
+    <li>
+        <i class="fa-regular fa-clock me-2"></i>
+        Sunday Worship — 9:00 AM
+    </li>
+    <li>
+        <i class="fa-regular fa-clock me-2"></i>
+        Bible Study — Wed, 5:00 PM
+    </li>
+    <li>
+        <i class="fa-regular fa-clock me-2"></i>
+        Prayer Meeting — Fri, 6:00 PM
+    </li>
+</ul>
+                <a href="{% url 'donate' %}" class="btn btn-donate btn-sm mt-2">
+                    <i class="fa-solid fa-heart me-1"></i>Give Online
+                </a>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="row align-items-center">
+            <div class="col-md-8 text-center text-md-start">
+                <small>
+                    &copy; 2026 Christ Apostolic Church Itedo Agbara Olorun. All Rights Reserved.
+                </small>
+            </div>
+            <div class="col-md-4 text-center text-md-end">
+                <small class="footer-muted">Built with faith &amp; care</small>
+            </div>
+        </div>
 
     </div>
-
 </footer>

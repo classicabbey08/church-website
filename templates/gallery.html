@@ -5,24 +5,68 @@
 
 {% block content %}
 
+<!-- Page Header -->
+<section class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="container position-relative text-center">
+        <span class="hero-eyebrow">Moments Worth Remembering</span>
+        <h1 class="page-header-title">Church Gallery</h1>
+        <p class="page-header-sub">
+            A look into worship, fellowship, and life at CAC Itedo Agbara Olorun.
+        </p>
+    </div>
+</section>
+
+<!-- Gallery Grid -->
 <section class="py-5">
 
     <div class="container">
 
-        <h2 class="text-center mb-5">Church Gallery</h2>
-
         <div class="row g-4">
 
-            <div class="col-md-4">
-                <img src="{% static 'images/dis.png' %}" class="img-fluid rounded shadow">
+            <div class="col-sm-6 col-md-4">
+                <div class="gallery-item"
+                     data-bs-toggle="modal"
+                     data-bs-target="#galleryModal"
+                     data-img="{% static 'images/dis.png' %}"
+                     data-caption="Church Gathering">
+                    <img src="{% static 'images/dis.png' %}"
+                         class="gallery-img"
+                         alt="Church gathering">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-md-4">
-                <img src="{% static 'images/dis.png' %}" class="img-fluid rounded shadow">
+            <div class="col-sm-6 col-md-4">
+                <div class="gallery-item"
+                     data-bs-toggle="modal"
+                     data-bs-target="#galleryModal"
+                     data-img="{% static 'images/dis.png' %}"
+                     data-caption="Sunday Worship">
+                    <img src="{% static 'images/dis.png' %}"
+                         class="gallery-img"
+                         alt="Sunday worship">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-md-4">
-                <img src="{% static 'images/dis.png' %}" class="img-fluid rounded shadow">
+            <div class="col-sm-6 col-md-4">
+                <div class="gallery-item"
+                     data-bs-toggle="modal"
+                     data-bs-target="#galleryModal"
+                     data-img="{% static 'images/dis.png' %}"
+                     data-caption="Fellowship">
+                    <img src="{% static 'images/dis.png' %}"
+                         class="gallery-img"
+                         alt="Church fellowship">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -30,5 +74,34 @@
     </div>
 
 </section>
+
+<!-- Lightbox Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content gallery-modal-content">
+            <button type="button" class="btn-close btn-close-white gallery-modal-close"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+            <img src="" id="galleryModalImg" class="img-fluid rounded" alt="">
+            <p id="galleryModalCaption" class="gallery-modal-caption"></p>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var galleryModal = document.getElementById('galleryModal');
+    if (galleryModal) {
+        galleryModal.addEventListener('show.bs.modal', function (event) {
+            var trigger = event.relatedTarget;
+            var imgSrc = trigger.getAttribute('data-img');
+            var caption = trigger.getAttribute('data-caption');
+            document.getElementById('galleryModalImg').src = imgSrc;
+            document.getElementById('galleryModalCaption').textContent = caption;
+        });
+    }
+});
+</script>
+{% endblock %}
 
 {% endblock %}

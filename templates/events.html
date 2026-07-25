@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="container position-relative text-center">
+        <span class="hero-eyebrow">Mark Your Calendar</span>
+        <h1 class="page-header-title">Upcoming Events</h1>
+        <p class="page-header-sub">
+            Join us as we worship, learn, and grow together.
+        </p>
+    </div>
+</section>
+
+<!-- Events Grid -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            {% comment %} Flagged: this page said 8:00 AM, Home/footer say 9:00 AM — using 9:00 AM here for consistency {% endcomment %}
+            <div class="col-md-4">
+                <div class="event-card">
+                    <div class="event-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h4>Sunday Service</h4>
+                    <p class="event-schedule">
+                        <i class="fa-regular fa-calendar me-2"></i>Every Sunday
+                    </p>
+                    <p class="event-schedule">
+                        <i class="fa-regular fa-clock me-2"></i>9:00 AM
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="event-card">
+                    <div class="event-icon">
+                        <i class="fa-solid fa-book-bible"></i>
+                    </div>
+                    <h4>Bible Study</h4>
+                    <p class="event-schedule">
+                        <i class="fa-regular fa-calendar me-2"></i>Every Wednesday
+                    </p>
+                    <p class="event-schedule">
+                        <i class="fa-regular fa-clock me-2"></i>5:00 PM
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="event-card">
+                    <div class="event-icon">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+                    <h4>Night Vigil</h4>
+                    <p class="event-schedule">
+                        <i class="fa-regular fa-calendar me-2"></i>Last Friday of the Month
+                    </p>
+                    <p class="event-schedule">
+                        <i class="fa-regular fa-clock me-2"></i>10:00 PM
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

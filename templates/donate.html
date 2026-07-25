@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Donate{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="page-header-overlay"></div>
+    <div class="container position-relative text-center">
+        <span class="hero-eyebrow">Give Cheerfully</span>
+        <h1 class="page-header-title">Support God's Work</h1>
+        <p class="page-header-sub">
+            Your giving helps us reach souls and grow the ministry.
+        </p>
+    </div>
+</section>
+
+<!-- Donation Details -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-7">
+
+                <div class="donate-card">
+
+                    <div class="donate-card-header text-center">
+                        <div class="donate-icon">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h4>Church Account Details</h4>
+                        <p class="donate-subtext">
+                            {% comment %} Placeholder — replace with real bank details {% endcomment %}
+                            Give securely via bank transfer using the details below.
+                        </p>
+                    </div>
+
+                    <div class="donate-details">
+
+                        <div class="donate-row">
+                            <span class="donate-label">
+                                <i class="fa-solid fa-building-columns me-2"></i>Bank
+                            </span>
+                            <span class="donate-value">Your Bank Name</span>
+                        </div>
+
+                        <div class="donate-row">
+                            <span class="donate-label">
+                                <i class="fa-solid fa-church me-2"></i>Account Name
+                            </span>
+                            <span class="donate-value">Christ Apostolic Church Itedo Agbara Olorun</span>
+                        </div>
+
+                        <div class="donate-row">
+                            <span class="donate-label">
+                                <i class="fa-solid fa-hashtag me-2"></i>Account Number
+                            </span>
+                            <span class="donate-value donate-account-number">
+                                <span id="accountNumber">0000000000</span>
+                                <button type="button" class="btn-copy" id="copyAccountBtn" aria-label="Copy account number">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <hr class="donate-divider">
+
+                    <p class="donate-thanks text-center">
+                        Thank you for supporting the ministry.
+                        <br>May God richly bless you.
+                    </p>
+
+                </div>
+
+                <div class="donate-verse text-center mt-4">
+                    <i class="fa-solid fa-quote-left verse-icon"></i>
+                    <p>
+                        &ldquo;Each of you should give what you have decided in your heart to give,
+                        not reluctantly or under compulsion, for God loves a cheerful giver.&rdquo;
+                    </p>
+                    <span class="donate-verse-ref">2 Corinthians 9:7</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var copyBtn = document.getElementById('copyAccountBtn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', function () {
+            var number = document.getElementById('accountNumber').textContent.trim();
+            navigator.clipboard.writeText(number).then(function () {
+                var icon = copyBtn.querySelector('i');
+                icon.classList.remove('fa-copy');
+                icon.classList.add('fa-check');
+                copyBtn.classList.add('copied');
+                setTimeout(function () {
+                    icon.classList.remove('fa-check');
+                    icon.classList.add('fa-copy');
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            });
+        });
+    }
+});
+</script>
+{% endblock %}
+
+{% endblock %}
