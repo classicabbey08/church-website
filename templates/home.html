@@ -8,7 +8,7 @@ CAC Itedo Agbara Olorun
 {% block content %}
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" data-aos="fade-up">
 
     <div class="hero-overlay"></div>
 
@@ -18,9 +18,7 @@ CAC Itedo Agbara Olorun
 
             <div class="col-lg-8 mx-auto text-center hero-content">
 
-                <img src="{% static 'images/logo.png' %}"
-                     alt="Church Logo"
-                     class="hero-logo mb-4">
+
 
                 <span class="hero-eyebrow">Welcome Home</span>
 
@@ -64,7 +62,8 @@ CAC Itedo Agbara Olorun
 </section>
 
 <!-- Mission -->
-<section class="mission-section py-5">
+<section class="mission-section py-5"
+         data-aos="fade-right">
 
     <div class="container text-center">
 
@@ -81,14 +80,16 @@ CAC Itedo Agbara Olorun
 </section>
 
 <!-- Stats -->
-<section class="stats py-5">
+<section class="stats py-5" data-aos="fade-up">
 
     <div class="container">
 
         <div class="row text-center g-4">
 
             <div class="col-6 col-md-3">
-                <div class="stat-item">
+                <div class="stat-item"
+                     data-aos="zoom-in"
+                     data-aos-delay="100">
                     <i class="fa-solid fa-cross stat-icon"></i>
                     <h2 class="stat-number">50+</h2>
                     <p class="stat-label">Years of Ministry</p>
@@ -96,7 +97,9 @@ CAC Itedo Agbara Olorun
             </div>
 
             <div class="col-6 col-md-3">
-                <div class="stat-item">
+                <div class="stat-item"
+                     data-aos="zoom-in"
+                     data-aos-delay="200">
                     <i class="fa-solid fa-people-group stat-icon"></i>
                     <h2 class="stat-number">500+</h2>
                     <p class="stat-label">Members</p>
@@ -104,7 +107,9 @@ CAC Itedo Agbara Olorun
             </div>
 
             <div class="col-6 col-md-3">
-                <div class="stat-item">
+                <div class="stat-item"
+                     data-aos="zoom-in"
+                     data-aos-delay="300">
                     <i class="fa-solid fa-dove stat-icon"></i>
                     <h2 class="stat-number">100+</h2>
                     <p class="stat-label">Souls Won</p>
@@ -112,7 +117,9 @@ CAC Itedo Agbara Olorun
             </div>
 
             <div class="col-6 col-md-3">
-                <div class="stat-item">
+                <div class="stat-item"
+                     data-aos="zoom-in"
+                     data-aos-delay="400">
                     <i class="fa-solid fa-calendar-days stat-icon"></i>
                     <h2 class="stat-number">7</h2>
                     <p class="stat-label">Weekly Programs</p>
@@ -126,7 +133,8 @@ CAC Itedo Agbara Olorun
 </section>
 
 <!-- Weekly Services -->
-<section class="services py-5" id="weekly-services">
+<section class="services py-5" id="weekly-services"
+         data-aos="fade-left">
 
     <div class="container">
 
@@ -177,7 +185,8 @@ CAC Itedo Agbara Olorun
 </section>
 
 <!-- Bible Verse -->
-<section class="verse-section py-5 text-center">
+<section class="verse-section py-5 text-center"
+    data-aos="fade-up">
 
     <div class="container">
         <i class="fa-solid fa-quote-left verse-icon"></i>
@@ -190,37 +199,447 @@ CAC Itedo Agbara Olorun
 </section>
 
 {% comment %} About Section {% endcomment %}
-<section class="about-preview py-5">
+<!-- About Section -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-subtitle">WHO WE ARE</span>
+            <h2 class="section-title">About Our Church</h2>
+            <p class="section-description">
+                We are a Christ-centered church committed to raising believers,
+                preaching the Gospel, and transforming lives through worship,
+                prayer and God's Word.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="about-card">
+                    <h4>Mission</h4>
+                    <p>
+                        Raising disciples through the teaching of God's Word,
+                        prayer and evangelism.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="about-card">
+                    <h4>Vision</h4>
+                    <p>
+                        To build a Christ-centered family where lives are
+                        transformed and destinies fulfilled.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="about-card">
+                    <h4>Our History</h4>
+                    <p>
+                        A brief history of CAC Itedo Agbara Olorun will appear
+                        here once finalized.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Leadership Preview -->
+<section class="leadership-preview py-5" id="leadership-preview" data-aos="fade-up">
 
     <div class="container">
 
-        <div class="row align-items-center g-5">
+        <div class="text-center mb-5">
 
-            <div class="col-lg-6">
+            <span class="section-eyebrow">
+                Our Shepherds
+            </span>
 
-                <span class="section-eyebrow">Who We Are</span>
-                <h2 class="section-title mb-3">About Our Church</h2>
+            <h2 class="section-title">
+                Church Leadership
+            </h2>
 
-                <p class="about-text">
-                    Christ Apostolic Church Itedo Agbara Olorun is a place
-                    where everyone is welcomed with love.
-                    We are committed to preaching the Gospel,
-                    building faith, and raising disciples who
-                    live according to God's Word.
-                </p>
+            <p class="text-muted mx-auto" style="max-width:700px;">
+                God has blessed our church with faithful leaders who are committed to
+                preaching the Gospel, nurturing believers, and serving with humility.
+            </p>
 
-                <a href="{% url 'about' %}" class="btn btn-primary-custom">
-                    Learn More <i class="fa-solid fa-arrow-right ms-2"></i>
-                </a>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <!-- Resident Pastor -->
+            <div class="col-lg-5 mb-4">
+
+                <div class="leader-card shadow-sm">
+
+                    <img src="{% static 'images/pastor-placeholder.jpg' %}"
+                         alt="Resident Pastor"
+                         class="leader-image">
+
+                    <div class="leader-content">
+
+                        <h4>Pastor Name</h4>
+
+                        <span class="leader-role">
+                            Resident Pastor
+                        </span>
+
+                        <p>
+                            A brief biography about the Resident Pastor will appear here
+                            once the official information is received.
+                        </p>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="col-lg-6 text-center">
+            <!-- Assistant Pastor -->
+            <div class="col-lg-5 mb-4">
 
-                <div class="about-image-wrap">
-                    <img src="{% static 'images/dis.png' %}"
-                         class="img-fluid about-image"
-                         alt="Church congregation">
+                <div class="leader-card shadow-sm">
+
+                    <img src="{% static 'images/pastor-placeholder.jpg' %}"
+                         alt="Assistant Pastor"
+                         class="leader-image">
+
+                    <div class="leader-content">
+
+                        <h4>Assistant Pastor</h4>
+
+                        <span class="leader-role">
+                            Church Leader
+                        </span>
+
+                        <p>
+                            More leadership information will be added after the church
+                            provides the official details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-3">
+
+            <a href="{% url 'leadership' %}"
+               class="btn btn-hero-primary">
+
+                Meet Our Leadership
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Events Preview -->
+<section class="events-preview py-5" data-aos="fade-up">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-eyebrow">
+                Fellowship Together
+            </span>
+
+            <h2 class="section-title">
+                Upcoming Services & Events
+            </h2>
+
+            <p class="text-muted mx-auto" style="max-width:700px;">
+                Join us throughout the week as we worship, pray, study God's Word,
+                and grow together as one family in Christ.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+
+                    <h4>Sunday Worship</h4>
+
+                    <span class="event-time">
+                        Every Sunday • 9:00 AM
+                    </span>
+
+                    <p>
+                        Experience inspiring worship, powerful teaching,
+                        and warm fellowship.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        <i class="fa-solid fa-book-bible"></i>
+                    </div>
+
+                    <h4>Bible Study</h4>
+
+                    <span class="event-time">
+                        Wednesday • 5:00 PM
+                    </span>
+
+                    <p>
+                        Grow deeper in God's Word through interactive Bible teaching.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="event-card">
+
+                    <div class="event-icon">
+                        <i class="fa-solid fa-hands-praying"></i>
+                    </div>
+
+                    <h4>Prayer Meeting</h4>
+
+                    <span class="event-time">
+                        Friday • 6:00 PM
+                    </span>
+
+                    <p>
+                        Stand together in prayer as we seek God's presence and power.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+
+            <a href="{% url 'events' %}" class="btn btn-hero-primary">
+                View All Events
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Gallery Preview -->
+<section class="gallery-preview py-5" data-aos="fade-up">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-eyebrow">
+                Moments of Grace
+            </span>
+
+            <h2 class="section-title">
+                Church Gallery
+            </h2>
+
+            <p class="text-muted mx-auto" style="max-width:700px;">
+                A glimpse into our worship services, church family, special programmes,
+                and unforgettable moments in God's presence.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <img src="{% static 'images/gallery1.jpg' %}"
+                     class="gallery-preview-image"
+                     alt="Sunday Worship">
+            </div>
+
+            <div class="col-md-4">
+                <img src="{% static 'images/gallery2.jpg' %}"
+                     class="gallery-preview-image"
+                     alt="Church Programme">
+            </div>
+
+            <div class="col-md-4">
+                <img src="{% static 'images/gallery3.jpg' %}"
+                     class="gallery-preview-image"
+                     alt="Congregation">
+            </div>
+
+            <div class="col-md-4">
+                <img src="{% static 'images/gallery4.jpg' %}"
+                     class="gallery-preview-image"
+                     alt="Choir">
+            </div>
+
+            <div class="col-md-4">
+                <img src="{% static 'images/gallery5.jpg' %}"
+                     class="gallery-preview-image"
+                     alt="Youth Fellowship">
+            </div>
+
+            <div class="col-md-4">
+                <img src="{% static 'images/gallery6.jpg' %}"
+                     class="gallery-preview-image"
+                     alt="Church Building">
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+
+            <a href="{% url 'gallery' %}"
+               class="btn btn-hero-primary">
+
+                View Full Gallery
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact Preview -->
+<section class="contact-preview py-5" data-aos="fade-up">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="section-eyebrow">
+                    Visit Us
+                </span>
+
+                <h2 class="section-title">
+                    We'd Love To Welcome You
+                </h2>
+
+                <p class="contact-intro">
+
+                    Join us for worship, fellowship and spiritual growth.
+                    Whether you're visiting for the first time or looking
+                    for a church family, our doors are always open.
+
+                </p>
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+
+                        <h5>Church Address</h5>
+
+                        <p>
+                            Church Address will be updated once received.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+
+                        <h5>Phone Number</h5>
+
+                        <p>
+                            Coming Soon
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+
+                        <h5>Email</h5>
+
+                        <p>
+                            Coming Soon
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="mt-4">
+
+                    <a href="{% url 'contact' %}"
+                       class="btn btn-hero-primary">
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="service-box">
+
+                    <h3>Weekly Services</h3>
+
+                    <ul>
+
+                        <li>
+                            <strong>Sunday Worship</strong>
+                            <span>9:00 AM</span>
+                        </li>
+
+                        <li>
+                            <strong>Bible Study</strong>
+                            <span>Wednesday • 5:00 PM</span>
+                        </li>
+
+                        <li>
+                            <strong>Prayer Meeting</strong>
+                            <span>Friday • 6:00 PM</span>
+                        </li>
+
+                    </ul>
+
                 </div>
 
             </div>

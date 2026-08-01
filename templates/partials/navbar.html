@@ -1,58 +1,86 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar" id="mainNav">
+{% load static %}
+
+<nav class="navbar navbar-expand-lg fixed-top glass-navbar" id="mainNav">
+
     <div class="container">
 
-        <a class="navbar-brand custom-brand" href="{% url 'home' %}">
-            <i class="fa-solid fa-church me-2"></i>CAC Itedo Agbara Olorun
-        </a>
+        <a class="navbar-brand d-flex align-items-center custom-brand"
+            href="{% url 'home' %}">
 
+            <img src="{% static 'images/logo.png' %}"
+                 alt="Church Logo"
+                 class="church-logo me-2">
+
+            <span>CAC Itedo Agbara Olorun</span>
+
+        </a>
         <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar"
-                aria-controls="navbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar">
+
             <span class="navbar-toggler-icon"></span>
+
         </button>
 
-        <div class="collapse navbar-collapse" id="navbar">
+        <div class="collapse navbar-collapse"
+            id="navbar">
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
-                       href="{% url 'home' %}">Home</a>
+                        href="{% url 'home' %}">
+                        Home
+                    </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
-                       href="{% url 'about' %}">About</a>
+                        href="{% url 'about' %}">
+                        About
+                    </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'leadership' %}active{% endif %}"
-                       href="{% url 'leadership' %}">Leadership</a>
+                        href="{% url 'leadership' %}">
+                        Leadership
+                    </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'events' %}active{% endif %}"
-                       href="{% url 'events' %}">Events</a>
+                        href="{% url 'events' %}">
+                        Events
+                    </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'gallery' %}active{% endif %}"
-                       href="{% url 'gallery' %}">Gallery</a>
+                        href="{% url 'gallery' %}">
+                        Gallery
+                    </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
-                       href="{% url 'contact' %}">Contact</a>
+                        href="{% url 'contact' %}">
+                        Contact
+                    </a>
                 </li>
 
                 <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                    <a class="btn btn-donate" href="{% url 'donate' %}">
-                        <i class="fa-solid fa-heart me-1"></i>Donate
+
+                    <a class="btn btn-donate"
+                        href="{% url 'donate' %}">
+
+                        <i class="fa-solid fa-heart me-1"></i>
+
+                        Donate
+
                     </a>
+
                 </li>
 
             </ul>
@@ -60,4 +88,5 @@
         </div>
 
     </div>
+
 </nav>
